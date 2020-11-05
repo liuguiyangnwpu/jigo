@@ -1,4 +1,4 @@
-package jigo
+package v1
 
 import (
 	"bytes"
@@ -160,7 +160,7 @@ type BoolNode struct {
 }
 
 func (s *BoolNode) Copy() Node     { return &BoolNode{s.NodeType, s.Pos, s.Value} }
-func (s *BoolNode) String() string { return fmt.Sprintf(`%s`, s.Value) }
+func (s *BoolNode) String() string { return fmt.Sprintf("%v", s.Value) }
 
 type IntegerNode struct {
 	NodeType
@@ -470,7 +470,7 @@ type BlockNode struct {
 }
 
 func (b *BlockNode) String() string {
-	return fmt.Sprintf("{% block %s %}%s{% endblock %}", b.Name, b.Body)
+	return fmt.Sprintf("{%% block %v %%}%v{%% endblock %%}", b.Name, b.Body)
 }
 
 func (b *BlockNode) Copy() Node {

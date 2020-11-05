@@ -1,4 +1,4 @@
-package jigo
+package v1
 
 import (
 	"reflect"
@@ -10,6 +10,7 @@ type lookupper interface {
 }
 
 func checkLookup(t *testing.T, l lookupper, key string, value interface{}, ok bool) {
+	//a := l.(*lookupper)
 	v, present := l.lookup(key)
 	if present != ok {
 		t.Errorf("Expected %v presence, got %v\n", present, ok)

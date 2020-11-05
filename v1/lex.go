@@ -2,7 +2,7 @@
 // Also based on code from jinja2's lexer.py.
 // Both distributed under a BSD license.
 
-package jigo
+package v1
 
 import (
 	"fmt"

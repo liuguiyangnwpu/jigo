@@ -1,4 +1,4 @@
-package jigo
+package v1
 
 import "testing"
 

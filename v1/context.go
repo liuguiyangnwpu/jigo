@@ -1,4 +1,4 @@
-package jigo
+package v1
 
 import (
 	"fmt"
@@ -25,7 +25,7 @@ func NewContext(i interface{}) (*Context, error) {
 	c.kind = v.Kind()
 	c.value = v
 	if c.kind != reflect.Map && c.kind != reflect.Struct {
-		return c, fmt.Errorf("Context must be a struct or map, not %s")
+		return c, fmt.Errorf("Context must be a struct or map, not %v", c.kind)
 	}
 	return c, nil
 }
