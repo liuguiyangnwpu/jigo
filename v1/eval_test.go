@@ -29,9 +29,12 @@ func TestSimpleEval(t *testing.T) {
 			m{},
 			"true",
 		},
-		{"Conditional Var",
+		{
+			"Conditional Var",
 			`{% if var %}true{% else %}false{% endif %}`,
-			m{"var": false}, "false"},
+			m{"var": false},
+			"false",
+		},
 	}
 
 	// use defaults
